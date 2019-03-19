@@ -34,7 +34,7 @@ const token = {
 app.get('/twitterAPI', function(req, res) {
   var twitterHandle = req.query.user
   const request_data = {
-    url: 'https://api.twitter.com/1.1/search/tweets.json?q=' + twitterHandle +  '&count=50&result_type=popular&tweet_mode=extended',
+    url: 'https://api.twitter.com/1.1/search/tweets.json?q=from%3A' + twitterHandle +  '&result_type=popular&tweet_mode=extended',
     method: 'GET'
   }
   console.log(request_data.url)
